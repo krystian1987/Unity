@@ -4,13 +4,17 @@ using System.Collections;
 public class LevelManager : MonoBehaviour
 {
 
-  public float autoLoadNextLevel;
+  public float autoLoadNextLevelInSeconds;
 
   void Start()
   {
-    if (autoLoadNextLevel != 0)
+    if (autoLoadNextLevelInSeconds > 0)
     {
-      Invoke("LoadNextLevel", autoLoadNextLevel);
+      Invoke("LoadNextLevel", autoLoadNextLevelInSeconds);
+    }
+    else
+    {
+      Debug.LogWarning("Level auto load disabled, set a positive number for seconds.");
     }
   }
 
@@ -31,13 +35,4 @@ public class LevelManager : MonoBehaviour
   {
     Application.LoadLevel(Application.loadedLevel + 1);
   }
-
-  public void BrickDestoyed()
-  {
-    if (Brick.breakableCount <= 0)
-    {
-      LoadNextLevel();
-    }
-  }
-
 }
