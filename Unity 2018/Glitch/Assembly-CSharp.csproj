@@ -65,14 +65,17 @@
     <Compile Include="Assets\Prefabs\Attackers\Lizard.cs" />
     <Compile Include="Assets\Prefabs\Defenders\gravestone.cs" />
     <Compile Include="Assets\Scripts\Attacker.cs" />
-    <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
     <Compile Include="Assets\Scripts\Defender.cs" />
     <Compile Include="Assets\Scripts\FadeIn.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\OptionController.cs" />
     <Compile Include="Assets\Scripts\PlayerPrefManager.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\StartVolume.cs" />
+    <Compile Include="Assets\Shredder.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/Udemy/Unity 2018/Glitch/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
