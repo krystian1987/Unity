@@ -9,6 +9,9 @@ public class Attacker : MonoBehaviour
   private GameObject currentTargt;
   private Animator animator;
 
+  [Tooltip("Average number of seconds between appearances")]
+  public float seenEverySeconds;
+
   // Use this for initialization
   void Start ()
 	{

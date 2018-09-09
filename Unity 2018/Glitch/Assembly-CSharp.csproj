@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\Shredder.cs" />
     <Compile Include="Assets\Scripts\StartVolume.cs" />
+    <Compile Include="Assets\Spawner.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/Udemy/Unity 2018/Glitch/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
