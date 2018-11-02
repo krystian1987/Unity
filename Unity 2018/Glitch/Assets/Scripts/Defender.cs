@@ -1,21 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Defender : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-  void OnTriggerEnter2D()
+namespace Assets.Scripts
+{
+  public class Defender : MonoBehaviour
   {
-    Debug.Log(name + " trigger enter");
+    public int StarCost = 100;
+
+    private StarDisplay _starDisplay;
+
+    void Start()
+    {
+      _starDisplay = FindObjectOfType<StarDisplay>();
+    }
+
+    public void AddStars(int amount)
+    {
+      _starDisplay.AddStars(amount);
+    }
   }
 }

@@ -1,56 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class Attacker : MonoBehaviour
+namespace Assets.Scripts
 {
-  private float currentSpeed;
-  private GameObject currentTargt;
-  private Animator animator;
-
-  [Tooltip("Average number of seconds between appearances")]
-  public float seenEverySeconds;
-
-  // Use this for initialization
-  void Start ()
-	{
-	  animator = GetComponent<Animator>();
-  }
-	
-	// Update is called once per frame
-	void Update () {
-		transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
-	  if (currentTargt == null)
-	    animator.SetBool("IsAttacking", false);
-  }
-
-  void OnTriggerEnter2D()
+  [RequireComponent(typeof(Rigidbody2D))]
+  public class Attacker : MonoBehaviour
   {
-  }
+    private float _currentSpeed;
+    private GameObject _currentTargt;
+    private Animator _animator;
 
-  public void SetCurrentSpeed(float speed)
-  {
-    currentSpeed = speed;
-  }
+    [Tooltip("Average number of seconds between appearances")]
+    public float SeenEverySeconds;
 
-  public void StrikeCurrentTarget(float damage)
-  {
-    if (currentTargt != null)
+    // Use this for initialization
+    void Start ()
     {
-      var health = currentTargt.GetComponent<Health>();
-      if (health != null)
+      _animator = GetComponent<Animator>();
+    }
+	
+    // Update is called once per frame
+    void Update () {
+      transform.Translate(Vector3.left * _currentSpeed * Time.deltaTime);
+      if (_currentTargt == null)
+        _animator.SetBool("IsAttacking", false);
+    }
+
+    public void SetCurrentSpeed(float speed)
+    {
+      _currentSpeed = speed;
+    }
+
+    public void StrikeCurrentTarget(float damage)
+    {
+      if (_currentTargt != null)
       {
-        health.DealDamage(damage);
+        var health = _currentTargt.GetComponent<Health>();
+        if (health != null)
+        {
+          health.DealDamage(damage);
+        }
       }
     }
-  }
 
-  public void Attack(GameObject obj)
-  {
-    if (currentTargt == null)
+    public void Attack(GameObject obj)
     {
-      currentTargt = obj;
+      if (_currentTargt == null)
+      {
+        _currentTargt = obj;
+      }
     }
   }
 }

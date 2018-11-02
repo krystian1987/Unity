@@ -1,35 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts;
 using UnityEngine;
 
-[RequireComponent(typeof(Attacker))]
-public class Lizard : MonoBehaviour
+namespace Assets.Prefabs.Attackers
 {
-  private Attacker attacker;
-  private Animator animator;
+  [RequireComponent(typeof(Attacker))]
+  public class Lizard : MonoBehaviour
+  {
+    private Attacker _attacker;
+    private Animator _animator;
 
 // Use this for initialization
-  void Start()
-  {
-    animator = GetComponent<Animator>();
-    attacker = GetComponent<Attacker>();
-  }
+    void Start()
+    {
+      _animator = GetComponent<Animator>();
+      _attacker = GetComponent<Attacker>();
+    }
 
 // Update is called once per frame
-  void Update()
-  {
+    void Update()
+    {
+    }
 
-  }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+      GameObject obj = collider.gameObject;
 
-  void OnTriggerEnter2D(Collider2D collider)
-  {
-    GameObject obj = collider.gameObject;
+      if (!obj.GetComponent<Defender>())
+        return;
 
-    if (!obj.GetComponent<Defender>())
-      return;
-
-    animator.SetBool("IsAttacking", true);
-    attacker.Attack(obj);
+      _animator.SetBool("IsAttacking", true);
+      _attacker.Attack(obj);
+    }
   }
 }
 

@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class StartVolume : MonoBehaviour
+﻿using UnityEngine;
+namespace Assets.Scripts
 {
-  private MusicPlayer musicPlayer;
+  public class StartVolume : MonoBehaviour
+  {
+    private MusicPlayer _musicPlayer;
 
-  // Use this for initialization
-  void Start () {
-    musicPlayer = GameObject.FindObjectOfType<MusicPlayer>();
-      musicPlayer.ChangeVolume(PlayerPrefManager.GetMasterVolume());
+    // Use this for initialization
+    void Start () {
+      _musicPlayer = GameObject.FindObjectOfType<MusicPlayer>();
+      _musicPlayer.ChangeVolume(PlayerPrefManager.GetMasterVolume());
+    }
   }
 }

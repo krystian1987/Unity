@@ -1,48 +1,66 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class DefenderSpawner : MonoBehaviour
+namespace Assets.Scripts
 {
-  public Camera MyCamera;
-  private GameObject _parent;
+  public class DefenderSpawner : MonoBehaviour
+  {
+    public Camera MyCamera;
+    private GameObject _parent;
+    private StarDisplay _starDisplay;
 
-  // Use this for initialization
-  void Start () {
-	  _parent = GameObject.Find("Defenders");
-	  if (_parent == null)
-	  {
-	    _parent = new GameObject("Defenders");
-	  }
-  }
+    // Use this for initialization
+    void Start () {
+      _parent = GameObject.Find("Defenders");
+      _starDisplay = GameObject.FindObjectOfType<StarDisplay>();
+      if (_parent == null)
+      {
+        _parent = new GameObject("Defenders");
+      }
+    }
 	
-	// Update is called once per frame
-  void Update()
-  {
-  }
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
-  void OnMouseDown()
-  {
-    GameObject newDefender = Instantiate(Button.SelectedDefender, SnapToGrid(CalculatedWorldPointOfMouseClick()), Quaternion.identity) as GameObject;
+    void OnMouseDown()
+    {
+      Vector2 roundedPos = SnapToGrid(CalculatedWorldPointOfMouseClick());
+      GameObject defender = Button.SelectedDefender;
+      int defenderCosyt = defender.GetComponent<Defender>().StarCost;
+      if (_starDisplay.UseStrars(defenderCosyt) == StarDisplay.Status.SUCCESS)
+      {
+        SpawneDefender(defender, roundedPos);
+      }
+      else
+      {
+        
+      }
+    }
 
-    newDefender.transform.parent = _parent.transform;
-  }
+    private void SpawneDefender(GameObject defender, Vector2 roundedPos)
+    {
+      Quaternion zeroRot = Quaternion.identity;
+      GameObject newDefender = Instantiate(defender, roundedPos, zeroRot) as GameObject;
 
-  Vector2 SnapToGrid(Vector2 rawWorldPos)
-  {
-    return new Vector2(Mathf.RoundToInt(rawWorldPos.x), Mathf.RoundToInt(rawWorldPos.y));
-  }
+      newDefender.transform.parent = _parent.transform;
+    }
 
-  Vector2 CalculatedWorldPointOfMouseClick()
-  {
-    float mouseX = Input.mousePosition.x;
-    float mouseY = Input.mousePosition.y;
-    float distanceFromCamera = 10f;
+    Vector2 SnapToGrid(Vector2 rawWorldPos)
+    {
+      return new Vector2(Mathf.RoundToInt(rawWorldPos.x), Mathf.RoundToInt(rawWorldPos.y));
+    }
 
-    Vector3 weirdTriplet = new Vector3(mouseX,mouseY,distanceFromCamera);
-    Vector2 worldPos = MyCamera.ScreenToWorldPoint(weirdTriplet);
+    Vector2 CalculatedWorldPointOfMouseClick()
+    {
+      float mouseX = Input.mousePosition.x;
+      float mouseY = Input.mousePosition.y;
+      float distanceFromCamera = 10f;
 
-    return worldPos;
+      Vector3 weirdTriplet = new Vector3(mouseX,mouseY,distanceFromCamera);
+      Vector2 worldPos = MyCamera.ScreenToWorldPoint(weirdTriplet);
+
+      return worldPos;
+    }
   }
 }

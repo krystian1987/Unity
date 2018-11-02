@@ -1,41 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts;
 using UnityEngine;
 
-[RequireComponent(typeof(Attacker))]
-public class Fox : MonoBehaviour
+namespace Assets.Prefabs.Attackers
 {
-  private Attacker attacker;
-  private Animator animator;
-
-  // Use this for initialization
-  void Start ()
+  [RequireComponent(typeof(Attacker))]
+  public class Fox : MonoBehaviour
   {
-    animator = GetComponent<Animator>();
-    attacker = GetComponent<Attacker>();
-  }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private Attacker _attacker;
+    private Animator _animator;
 
-  void OnTriggerEnter2D(Collider2D collider)
-  {
-    
-    GameObject obj = collider.gameObject;
-
-    if (!obj.GetComponent<Defender>())
-      return;
-
-    if (obj.GetComponent<gravestone>())
+    // Use this for initialization
+    void Start ()
     {
-      animator.SetTrigger("JumpTrigger");
+      _animator = GetComponent<Animator>();
+      _attacker = GetComponent<Attacker>();
     }
-    else
+	
+    // Update is called once per frame
+    void Update () {
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
-      animator.SetBool("IsAttacking", true);
-      attacker.Attack(obj);
+    
+      GameObject obj = collider.gameObject;
+
+      if (!obj.GetComponent<Defender>())
+        return;
+
+      if (obj.GetComponent<Gravestone>())
+      {
+        _animator.SetTrigger("JumpTrigger");
+      }
+      else
+      {
+        _animator.SetBool("IsAttacking", true);
+        _attacker.Attack(obj);
+      }
     }
   }
 }

@@ -1,38 +1,40 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+namespace Assets.Scripts
 {
-
-  public float autoLoadNextLevelInSeconds;
-
-  void Start()
+  public class LevelManager : MonoBehaviour
   {
-    if (autoLoadNextLevelInSeconds > 0)
+    public float AutoLoadNextLevelInSeconds;
+
+    void Start()
     {
-      Invoke("LoadNextLevel", autoLoadNextLevelInSeconds);
+      if (AutoLoadNextLevelInSeconds > 0)
+      {
+        Invoke("LoadNextLevel", AutoLoadNextLevelInSeconds);
+      }
+      else
+      {
+        Debug.LogWarning("Level auto load disabled, set a positive number for seconds.");
+      }
     }
-    else
+
+
+    public void LoadLevel(string name)
     {
-      Debug.LogWarning("Level auto load disabled, set a positive number for seconds.");
+      SceneManager.LoadScene(name);
+      Debug.Log("Level load requested for: " + name);
     }
-  }
 
+    public void ExitLevel(string name)
+    {
+      Application.Quit();
+      Debug.Log("Level exit requested for: " + name);
+    }
 
-  public void LoadLevel(string name)
-  {
-    Application.LoadLevel(name);
-    Debug.Log("Level load requested for: " + name);
-  }
-
-  public void ExitLevel(string name)
-  {
-    Application.Quit();
-    Debug.Log("Level exit requested for: " + name);
-  }
-
-  public void LoadNextLevel()
-  {
-    Application.LoadLevel(Application.loadedLevel + 1);
+    public void LoadNextLevel()
+    {
+      SceneManager.LoadScene(Application.loadedLevel + 1);
+    }
   }
 }
