@@ -12,6 +12,7 @@ namespace Assets.Scripts
     public AudioClip EndClip;
 
     private AudioSource music;
+    private AudioSource _audioSource;
 
     void Start()
     {
@@ -24,7 +25,10 @@ namespace Assets.Scripts
       {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        music = GetComponent<AudioSource>();
+        _audioSource=GetComponent<AudioSource>();
+        _audioSource.volume = PlayerPrefManager.GetMasterVolume();
+
+        music = _audioSource;
         music.clip = SplashClip;
         music.loop = true;
         music.Play();

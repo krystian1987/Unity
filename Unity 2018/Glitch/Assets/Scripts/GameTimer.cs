@@ -26,14 +26,32 @@ namespace Assets.Scripts
     void Update ()
     {
       _slider.value = Time.timeSinceLevelLoad / LevelSeconds;
-      if (_slider.value >=1 && !_isEndOfLevel)
+      if (_slider.value >= 1 && !_isEndOfLevel)
       {
-        _audioSource.Play();
-        _winLabel.SetActive(true);
-        Invoke("LoadNextLevel", _audioSource.clip.length);
-        _isEndOfLevel = true;
+        OnWin();
       }
     }
+
+    private void OnWin()
+    {
+      DestroyOnTaggedObjects();
+      _audioSource.Play();
+      _winLabel.SetActive(true);
+      Invoke("LoadNextLevel", _audioSource.clip.length);
+      _isEndOfLevel = true;
+    }
+
+    private void DestroyOnTaggedObjects()
+    {
+      var allGameObjectsWithTag = GameObject.FindGameObjectsWithTag("DestroyOnWin");
+
+      foreach (var item in allGameObjectsWithTag)
+      {
+        Destroy(item);
+      }
+    }
+
+    //DestroyOnWin
 
     private void LoadNextLevel()
     {
