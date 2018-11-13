@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: b1afc37a6302dae4681614bcbb06b1f9
+  productGUID: 3b9fbe0af7b118742b409fa4f8db9e00
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -619,8 +619,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 6ab5ea39-6877-4eb0-b00b-c70c0babc18f
-  projectName: Dungeon Escape
+  cloudProjectId: 76252a33-9bda-4862-8bca-3942dd384a49
+  projectName: Dungeon Escape (1)
   organizationId: krystian-2605759
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
