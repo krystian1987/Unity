@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour {
   private Animator _animator;
+  private Animator _swordAnim;
 
   // Use this for initialization
 	void Start () {
 	  _animator = GetComponentInChildren<Animator>();
+    _swordAnim = transform.GetChild(1).GetComponent<Animator>();
   }
 
   public void Move(float move)
@@ -19,5 +19,11 @@ public class PlayerAnimation : MonoBehaviour {
   public void Jump(bool jumping)
   {
     _animator.SetBool("Jump", jumping);
+  }
+
+  public void Attack()
+  {
+    _animator.SetTrigger("Attack");
+    _swordAnim.SetTrigger("SwordAnim");
   }
 }

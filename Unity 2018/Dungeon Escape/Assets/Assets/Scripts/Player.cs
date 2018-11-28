@@ -26,6 +26,15 @@ public class Player : MonoBehaviour
   void Update()
   {
     Movement();
+    Attack();
+  }
+
+  private void Attack()
+  {
+    if (IsGrounded() && Input.GetKeyDown(KeyCode.LeftShift))
+    {
+      _playerAnimation.Attack();
+    }
   }
 
   private void Movement()
@@ -46,12 +55,14 @@ public class Player : MonoBehaviour
     _rigidbody2D.velocity = new Vector2(move * _playerSpeed, _rigidbody2D.velocity.y);
 
     _playerAnimation.Move(move);
+   
 
   }
 
   private bool IsGrounded()
   {
-    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 1f, 1 << 8);
+    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.8f, 1 << 8);
+    Debug.DrawRay(transform.position, Vector3.down, Color.green);
     if (hitInfo.collider != null)
     {
       if (_resetJump == false)
