@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
   private Animator _animator;
   private PlayerAnimation _playerAnimation;
   private SpriteRenderer _playerSpriteRenderer;
+  private SpriteRenderer _attackSpriteRenderer;
 
   // Use this for initialization
   void Start ()
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     _rigidbody2D = GetComponent<Rigidbody2D>();
     _playerAnimation = GetComponent<PlayerAnimation>();
     _playerSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    _attackSpriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
   }
 	
 	// Update is called once per frame
@@ -43,7 +45,7 @@ public class Player : MonoBehaviour
     IsGrounded();
 
     if (move != 0)
-      _playerSpriteRenderer.flipX = (move < 0);
+      FlipPlayer(move);
 
     if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
     {
@@ -54,9 +56,20 @@ public class Player : MonoBehaviour
 
     _rigidbody2D.velocity = new Vector2(move * _playerSpeed, _rigidbody2D.velocity.y);
 
-    _playerAnimation.Move(move);
-   
+    _playerAnimation.Move(move);  
+  }
 
+  private void FlipPlayer(float move)
+  {
+    bool fliping = (move < 0);
+
+    _playerSpriteRenderer.flipX = fliping;
+    
+    _attackSpriteRenderer.flipY = fliping;
+
+    Vector3 newPos = _attackSpriteRenderer.transform.localPosition;
+    newPos.x = Mathf.Abs(newPos.x) * (fliping ?  (-1) : 1);
+    _attackSpriteRenderer.transform.localPosition = newPos;
   }
 
   private bool IsGrounded()
