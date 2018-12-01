@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Skeleton : EnemyBase {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+  public override void Update()
+  {
+    throw new System.NotImplementedException();
+  }
 }
