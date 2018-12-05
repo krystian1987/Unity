@@ -3,33 +3,38 @@
 public abstract class EnemyBase : MonoBehaviour
 {
   [SerializeField]
-  protected int Health;
+  protected int health;
   [SerializeField]
-  protected float Speed;
+  protected float speed;
   [SerializeField]
-  protected int Gems;
+  protected int gems;
   [SerializeField]
-  protected Transform StartPoint, EndPoint;
+  protected Transform startPoint, endPoint;
 
   protected Vector3 CurrentTarget;
   protected SpriteRenderer SpriteRenderer;
   protected Animator Animator;
 
+  protected Player player;
+
+  protected bool IsHit = false;
+
   public void Start()
   {
     Init();
   }
-
+  
   public virtual void Init()
   {
-    CurrentTarget = EndPoint.position;
+    CurrentTarget = endPoint.position;
     SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     Animator = GetComponentInChildren<Animator>();
+    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
   }
 
   public virtual void Update()
   {
-    if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+    if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && Animator.GetBool("InCombat") == false)
       return;
 
     MoveTowards();
@@ -37,26 +42,38 @@ public abstract class EnemyBase : MonoBehaviour
 
   protected virtual void MoveTowards()
   {
-    if (CurrentTarget == StartPoint.position)
+    if (CurrentTarget == startPoint.position)
     {
       SpriteRenderer.flipX = true;
     }
-    else if (CurrentTarget == EndPoint.position)
+    else if (CurrentTarget == endPoint.position)
     {
       SpriteRenderer.flipX = false;
     }
 
-    if (transform.position.x >= EndPoint.position.x)
+    if (transform.position.x >= endPoint.position.x)
     {
-      CurrentTarget = StartPoint.position;
+      CurrentTarget = startPoint.position;
       Animator.SetTrigger("Idle");
     }
-    else if (transform.position.x <= StartPoint.position.x)
+    else if (transform.position.x <= startPoint.position.x)
     {
-      CurrentTarget = EndPoint.position;
+      CurrentTarget = endPoint.position;
       Animator.SetTrigger("Idle");
     }
 
-    transform.position = Vector3.MoveTowards(transform.position, CurrentTarget, Speed * Time.deltaTime);
+    if (IsHit == false)
+    {
+      transform.position = Vector3.MoveTowards(transform.position, CurrentTarget, speed * Time.deltaTime);
+    }
+
+    float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
+    if (distance > 2f)
+    {
+      IsHit = false;
+      Animator.SetBool("InCombat", false);
+    }
   }
+
 }
+
