@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spider : EnemyBase
 {
-  public override void Update()
+  public override void Init()
   {
-    throw new System.NotImplementedException();
+    base.Init();
   }
 }

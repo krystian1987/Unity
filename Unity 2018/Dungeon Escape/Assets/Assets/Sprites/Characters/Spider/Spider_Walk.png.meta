@@ -140,10 +140,10 @@ TextureImporter:
       name: Spider_Walk_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 814
-        width: 217
-        height: 66
+        x: 0
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7189ba96d9c88fb458aa79e1da542859
+      spriteID: f7e7cb1d49e6cc74d8e661a9453200ca
       vertices: []
       indices: 
       edges: []
@@ -160,10 +160,10 @@ TextureImporter:
       name: Spider_Walk_1
       rect:
         serializedVersion: 2
-        x: 278
-        y: 814
-        width: 216
-        height: 66
+        x: 256
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46da10e23ff8b884797e723a0613e82e
+      spriteID: 837e17f0963f5e14d94cc920f1c1029e
       vertices: []
       indices: 
       edges: []
@@ -180,10 +180,10 @@ TextureImporter:
       name: Spider_Walk_2
       rect:
         serializedVersion: 2
-        x: 535
-        y: 814
-        width: 212
-        height: 67
+        x: 512
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f47cec05dbabfd45aeba12614e5fefd
+      spriteID: a32c14663bc6dc041be5cd7e643984d1
       vertices: []
       indices: 
       edges: []
@@ -200,10 +200,10 @@ TextureImporter:
       name: Spider_Walk_3
       rect:
         serializedVersion: 2
-        x: 793
-        y: 814
-        width: 207
-        height: 67
+        x: 768
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88254d9bcd8f21c48847272306ddbc81
+      spriteID: 78669fff11e2e1d47b4c356daa939c59
       vertices: []
       indices: 
       edges: []
@@ -220,10 +220,10 @@ TextureImporter:
       name: Spider_Walk_4
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 814
-        width: 200
-        height: 68
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71de08ee1059ef4f856cd5eb754ad25
+      spriteID: 42976efce5280404290c67496a8c7898
       vertices: []
       indices: 
       edges: []
@@ -240,10 +240,10 @@ TextureImporter:
       name: Spider_Walk_5
       rect:
         serializedVersion: 2
-        x: 1310
-        y: 814
-        width: 192
-        height: 70
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52ee3b4c03e643d429abfb652cf8f4e6
+      spriteID: be5c1001c844df14683236aaed747200
       vertices: []
       indices: 
       edges: []
@@ -260,10 +260,10 @@ TextureImporter:
       name: Spider_Walk_6
       rect:
         serializedVersion: 2
-        x: 1564
-        y: 815
-        width: 188
-        height: 69
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,7 +271,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 812e084b82af34d48a1173ca8e3c09c9
+      spriteID: 957bec9efcbc283438820c78aebe21ad
       vertices: []
       indices: 
       edges: []
@@ -280,10 +280,10 @@ TextureImporter:
       name: Spider_Walk_7
       rect:
         serializedVersion: 2
-        x: 1818
-        y: 815
-        width: 184
-        height: 69
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a919cd688d69704da44877e1fdcd9e6
+      spriteID: b430b264bf737604c952b96dc0434387
       vertices: []
       indices: 
       edges: []
@@ -300,10 +300,10 @@ TextureImporter:
       name: Spider_Walk_8
       rect:
         serializedVersion: 2
-        x: 24
-        y: 559
-        width: 181
-        height: 68
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,7 +311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ae426f801997c43b7f482bc9466cca
+      spriteID: b16bd0b488d773344900c81e5fa7d1fb
       vertices: []
       indices: 
       edges: []
@@ -320,10 +320,10 @@ TextureImporter:
       name: Spider_Walk_9
       rect:
         serializedVersion: 2
-        x: 278
-        y: 559
-        width: 177
-        height: 67
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6df5175782ea5e94e93a324e3eab039d
+      spriteID: ab1d53ebfb5cb0645b2165f8a2db327a
       vertices: []
       indices: 
       edges: []
@@ -340,10 +340,10 @@ TextureImporter:
       name: Spider_Walk_10
       rect:
         serializedVersion: 2
-        x: 532
-        y: 559
-        width: 176
-        height: 66
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,7 +351,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57581dce50c3c74db9fb61b1d57efe2
+      spriteID: 113d64a25d157f947b5760e5f8be4f74
       vertices: []
       indices: 
       edges: []
@@ -360,10 +360,10 @@ TextureImporter:
       name: Spider_Walk_11
       rect:
         serializedVersion: 2
-        x: 786
-        y: 559
-        width: 180
-        height: 67
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1849ec532cc4cb2488484126750802dc
+      spriteID: c8139b1bba3f8fc49878fc7234ce3fe9
       vertices: []
       indices: 
       edges: []
@@ -380,10 +380,10 @@ TextureImporter:
       name: Spider_Walk_12
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 559
-        width: 183
-        height: 67
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,7 +391,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ead11637f8efef46a1dacb248ef8457
+      spriteID: 07cf2ff9a314d8f4483c9035e0062ffb
       vertices: []
       indices: 
       edges: []
@@ -400,10 +400,10 @@ TextureImporter:
       name: Spider_Walk_13
       rect:
         serializedVersion: 2
-        x: 1294
-        y: 559
-        width: 184
-        height: 67
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,7 +411,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e293e493b9bf98d4d972540a16668d43
+      spriteID: c27fed1fa488d874db6bd6e1f2f54f7d
       vertices: []
       indices: 
       edges: []
@@ -420,10 +420,10 @@ TextureImporter:
       name: Spider_Walk_14
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 559
-        width: 184
-        height: 69
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,7 +431,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9532fd32aad2384cad32a09472a6cdf
+      spriteID: f0ca6b984491a974e84bad819a7611a2
       vertices: []
       indices: 
       edges: []
@@ -440,10 +440,10 @@ TextureImporter:
       name: Spider_Walk_15
       rect:
         serializedVersion: 2
-        x: 1802
-        y: 560
-        width: 184
-        height: 69
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,7 +451,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02319552a387914c96ad34069aa150f
+      spriteID: 2d148c36ae0dafc419c082e645097f7d
       vertices: []
       indices: 
       edges: []
@@ -460,10 +460,10 @@ TextureImporter:
       name: Spider_Walk_16
       rect:
         serializedVersion: 2
-        x: 8
-        y: 304
-        width: 190
-        height: 70
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,7 +471,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 746fb10b9b3d2e54f89bd9e2f3334a79
+      spriteID: fb1f248accba8f7469e6ee4131aba36c
       vertices: []
       indices: 
       edges: []
@@ -480,10 +480,10 @@ TextureImporter:
       name: Spider_Walk_17
       rect:
         serializedVersion: 2
-        x: 263
-        y: 302
-        width: 194
-        height: 74
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,7 +491,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bada43a47a012244d8bf90c350d94fc8
+      spriteID: ecdc93f24b2261b458b43f8b8b3c3df2
       vertices: []
       indices: 
       edges: []
@@ -500,10 +500,10 @@ TextureImporter:
       name: Spider_Walk_18
       rect:
         serializedVersion: 2
-        x: 518
-        y: 301
-        width: 199
-        height: 75
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26354333675a67d4c83fc230b36be406
+      spriteID: 8cc92543c361ebd43a135e0b2c8a3a23
       vertices: []
       indices: 
       edges: []
@@ -520,10 +520,10 @@ TextureImporter:
       name: Spider_Walk_19
       rect:
         serializedVersion: 2
-        x: 774
-        y: 301
-        width: 203
-        height: 75
+        x: 768
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,7 +531,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd45127e0b2d0da46af19b9eedf587d1
+      spriteID: de614633dc4be2c469f0265f9fdbd442
       vertices: []
       indices: 
       edges: []
@@ -540,10 +540,10 @@ TextureImporter:
       name: Spider_Walk_20
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 302
-        width: 204
-        height: 74
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,7 +551,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99901f7aa4d5dff42b88f72c9b340bb2
+      spriteID: 7a4586eec90313240b46a64c00a5170e
       vertices: []
       indices: 
       edges: []
@@ -560,10 +560,10 @@ TextureImporter:
       name: Spider_Walk_21
       rect:
         serializedVersion: 2
-        x: 1290
-        y: 302
-        width: 205
-        height: 72
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,7 +571,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a497c25e5bae8e44953ad99e121b063
+      spriteID: fa890230b91e4374e813698b2d58aad0
       vertices: []
       indices: 
       edges: []
@@ -580,10 +580,10 @@ TextureImporter:
       name: Spider_Walk_22
       rect:
         serializedVersion: 2
-        x: 1549
-        y: 302
-        width: 205
-        height: 70
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,7 +591,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c36060f6652f0d2439d398c3be11df60
+      spriteID: b261d1da19dcd654e9eb676d405595c6
       vertices: []
       indices: 
       edges: []
@@ -600,10 +600,10 @@ TextureImporter:
       name: Spider_Walk_23
       rect:
         serializedVersion: 2
-        x: 1808
-        y: 303
-        width: 206
-        height: 68
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -611,7 +611,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87f7ec6d928bd7f4f84e07e36c1350bf
+      spriteID: d2479702beabe24479f0a7c2eecdbe03
       vertices: []
       indices: 
       edges: []
@@ -620,10 +620,10 @@ TextureImporter:
       name: Spider_Walk_24
       rect:
         serializedVersion: 2
-        x: 19
-        y: 47
-        width: 206
-        height: 69
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,7 +631,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee8ec1ce12ebf484e82276e06feb7c5f
+      spriteID: 9512337c97b772e4885ca44d1ba68403
       vertices: []
       indices: 
       edges: []
@@ -640,10 +640,10 @@ TextureImporter:
       name: Spider_Walk_25
       rect:
         serializedVersion: 2
-        x: 278
-        y: 47
-        width: 207
-        height: 67
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,7 +651,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05ba4877a9f0176449461dfffae2f23f
+      spriteID: 771127d73a235fa47803231178972d87
       vertices: []
       indices: 
       edges: []
@@ -660,10 +660,10 @@ TextureImporter:
       name: Spider_Walk_26
       rect:
         serializedVersion: 2
-        x: 537
-        y: 47
-        width: 207
-        height: 67
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,7 +671,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11f22c41b521d51418a99dca28d51c2b
+      spriteID: 015dc02c53a542a4ca03f729c4ce5484
       vertices: []
       indices: 
       edges: []
@@ -680,10 +680,10 @@ TextureImporter:
       name: Spider_Walk_27
       rect:
         serializedVersion: 2
-        x: 796
-        y: 48
-        width: 207
-        height: 65
+        x: 768
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,7 +691,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abeb8801edb322a43a9802201d856b8f
+      spriteID: fd7ca8aeed880c5428aba916cd3a95e8
       vertices: []
       indices: 
       edges: []
@@ -700,10 +700,10 @@ TextureImporter:
       name: Spider_Walk_28
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 48
-        width: 213
-        height: 65
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,7 +711,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10d1f05dc591c9d42a68cfde2c09a4f2
+      spriteID: bc56e4e2ccb33cd4db59ec38e086c66b
       vertices: []
       indices: 
       edges: []
@@ -720,10 +720,10 @@ TextureImporter:
       name: Spider_Walk_29
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 48
-        width: 216
-        height: 64
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -731,7 +731,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49e6cd58ea3c6a48b45c3a2b3fe89cb
+      spriteID: b0ab00e759a521e40af0af22d35232c3
       vertices: []
       indices: 
       edges: []
@@ -740,10 +740,10 @@ TextureImporter:
       name: Spider_Walk_30
       rect:
         serializedVersion: 2
-        x: 1558
-        y: 46
-        width: 217
-        height: 66
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -751,7 +751,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5916d603c81f11478a1b061e5edfde3
+      spriteID: 24b482bebef8ea044b52677777445e96
       vertices: []
       indices: 
       edges: []
