@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
   private Rigidbody2D _rigidbody2D;
   private bool _resetJump = false;
@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
   private float _jumpForce = 5.0f;
   [SerializeField]
   private float _playerSpeed = 10.0f;
+  [SerializeField]
+  private int health = 50;
 
   private Animator _animator;
   private PlayerAnimation _playerAnimation;
@@ -18,6 +20,7 @@ public class Player : MonoBehaviour
   // Use this for initialization
   void Start ()
   {
+    Health = health;
     _rigidbody2D = GetComponent<Rigidbody2D>();
     _playerAnimation = GetComponent<PlayerAnimation>();
     _playerSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -92,5 +95,15 @@ public class Player : MonoBehaviour
     _resetJump = true;
     yield return new WaitForSeconds(0.1f);
     _resetJump = false;
+  }
+
+  public int Health { get; set; }
+  public void Damage(int damageAmount)
+  {
+    Health -= damageAmount;
+    if (Health < 1)
+    {
+      Destroy(gameObject);
+    }
   }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public abstract class EnemyBase : MonoBehaviour
 
   protected bool IsHit = false;
 
+ 
+
   public void Start()
   {
     Init();
@@ -38,6 +41,20 @@ public abstract class EnemyBase : MonoBehaviour
       return;
 
     MoveTowards();
+
+    if (Animator.GetBool("InCombat") == true)
+    {
+      Vector3 directory = player.transform.localPosition - transform.localPosition;
+      if (directory.x >= 0)
+      {
+        SpriteRenderer.flipX = false;
+      }
+      else
+      {
+        SpriteRenderer.flipX = true;
+      }
+    }
+
   }
 
   protected virtual void MoveTowards()
@@ -75,5 +92,6 @@ public abstract class EnemyBase : MonoBehaviour
     }
   }
 
+  
 }
 

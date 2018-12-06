@@ -14,9 +14,7 @@ public class Skeleton : EnemyBase, IDamageable
 
   public void Damage(int damageAmount)
   {
-    
     Health -= damageAmount;
-    Debug.Log("Hit " + this.name + " with damage " + damageAmount + " Health left: "+ Health);
     IsHit = true;
     Animator.SetTrigger("Hit");
     Animator.SetBool("InCombat", true);
