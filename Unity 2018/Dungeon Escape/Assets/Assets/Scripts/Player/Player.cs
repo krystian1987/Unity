@@ -12,6 +12,9 @@ public class Player : MonoBehaviour, IDamageable
   [SerializeField]
   private int health = 50;
 
+  public int diamonds = 0;
+
+
   private Animator _animator;
   private PlayerAnimation _playerAnimation;
   private SpriteRenderer _playerSpriteRenderer;

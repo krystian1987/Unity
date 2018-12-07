@@ -3,6 +3,7 @@ using UnityEngine.Assertions.Must;
 
 public abstract class EnemyBase : MonoBehaviour
 {
+  public GameObject diamondsPrefab;
   [SerializeField]
   protected int health;
   [SerializeField]
@@ -20,6 +21,19 @@ public abstract class EnemyBase : MonoBehaviour
 
   protected bool IsHit = false;
 
+  protected void Death()
+  {
+    Animator.SetTrigger("Death");
+   
+
+    for (int i = 0; i < gems; i++)
+    {
+      Vector3 pos = transform.position;
+      pos.x += i * 0.2f;
+      Instantiate(diamondsPrefab, pos, Quaternion.identity);
+    }
+    Destroy(gameObject, Animator.GetCurrentAnimatorStateInfo(0).length + 0.5f);
+  }
  
 
   public void Start()
