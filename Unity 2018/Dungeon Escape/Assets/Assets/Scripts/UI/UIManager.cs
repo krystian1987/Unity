@@ -6,7 +6,6 @@ using UnityEngine.XR.WSA.Persistence;
 
 public class UIManager : MonoBehaviour
 {
-
   private static UIManager _instance;
 
   public static UIManager Instance
@@ -22,10 +21,16 @@ public class UIManager : MonoBehaviour
   }
 
   public Text PlayerGemCountText;
+  public Image SelectionImage;
 
-  public void OpenShop(int gemCount)
+  public void UpdateGemCount(int gemCount)
   {
     PlayerGemCountText.text = $"{gemCount.ToString()}G";
+  }
+
+  public void UpdateShopSelection(int yPos)
+  {
+    SelectionImage.rectTransform.anchoredPosition = new Vector2(SelectionImage.rectTransform.anchoredPosition.x, yPos);
   }
 
   private void Awake()
