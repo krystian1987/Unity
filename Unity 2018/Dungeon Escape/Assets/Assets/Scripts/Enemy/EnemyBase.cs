@@ -24,7 +24,6 @@ public abstract class EnemyBase : MonoBehaviour
   protected void Death()
   {
     Animator.SetTrigger("Death");
-   
 
     for (int i = 0; i < gems; i++)
     {
@@ -68,7 +67,6 @@ public abstract class EnemyBase : MonoBehaviour
         SpriteRenderer.flipX = true;
       }
     }
-
   }
 
   protected virtual void MoveTowards()
@@ -98,11 +96,14 @@ public abstract class EnemyBase : MonoBehaviour
       transform.position = Vector3.MoveTowards(transform.position, CurrentTarget, speed * Time.deltaTime);
     }
 
-    float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
-    if (distance > 2f)
+    if (player != null)
     {
-      IsHit = false;
-      Animator.SetBool("InCombat", false);
+      float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
+      if (distance > 2f)
+      {
+        IsHit = false;
+        Animator.SetBool("InCombat", false);
+      }
     }
   }
 

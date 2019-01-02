@@ -10,7 +10,7 @@ public class Player : MonoBehaviour, IDamageable
   [SerializeField]
   private float _playerSpeed = 10.0f;
   [SerializeField]
-  private int health = 50;
+  public int Health { get; set; }
 
   public int diamonds = 0;
 
@@ -23,16 +23,19 @@ public class Player : MonoBehaviour, IDamageable
   // Use this for initialization
   void Start ()
   {
-    Health = health;
     _rigidbody2D = GetComponent<Rigidbody2D>();
     _playerAnimation = GetComponent<PlayerAnimation>();
     _playerSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     _attackSpriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+    Health = 4;
   }
 	
 	// Update is called once per frame
   void Update()
   {
+    if (Health < 1)
+      return;
+
     Movement();
     Attack();
   }
@@ -63,6 +66,12 @@ public class Player : MonoBehaviour, IDamageable
     _rigidbody2D.velocity = new Vector2(move * _playerSpeed, _rigidbody2D.velocity.y);
 
     _playerAnimation.Move(move);  
+  }
+
+  public void AddGems(int amout)
+  {
+    diamonds += amout;
+    UIManager.Instance.UpdateGemCountText(diamonds);
   }
 
   private void FlipPlayer(float move)
@@ -100,13 +109,17 @@ public class Player : MonoBehaviour, IDamageable
     _resetJump = false;
   }
 
-  public int Health { get; set; }
+  
   public void Damage(int damageAmount)
   {
+    if (Health < 1)
+      return;
+
     Health -= damageAmount;
+    UIManager.Instance.UpdateLifes(Health);
     if (Health < 1)
     {
-      Destroy(gameObject);
+      _playerAnimation.Death();
     }
   }
 }

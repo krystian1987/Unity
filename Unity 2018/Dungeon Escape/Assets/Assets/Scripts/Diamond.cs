@@ -13,7 +13,7 @@ public class Diamond : MonoBehaviour
       Player player = collider2D.GetComponent<Player>();
       if (player != null)
       {
-        player.diamonds += gem;
+        player.AddGems(gem);
         Destroy(gameObject);
       }
     }

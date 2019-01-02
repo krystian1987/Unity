@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.WSA.Persistence;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,6 +19,8 @@ public class UIManager : MonoBehaviour
 
   public Text PlayerGemCountText;
   public Image SelectionImage;
+  public Text GemCount;
+  public Image[] LifeUnits;
 
   public void UpdateGemCount(int gemCount)
   {
@@ -31,6 +30,26 @@ public class UIManager : MonoBehaviour
   public void UpdateShopSelection(int yPos)
   {
     SelectionImage.rectTransform.anchoredPosition = new Vector2(SelectionImage.rectTransform.anchoredPosition.x, yPos);
+  }
+
+  public void UpdateGemCountText(int count)
+  {
+    GemCount.text = $"{count}";
+  }
+
+  public void UpdateLifes(int lifeRemaining)
+  {
+    for (int i = 0; i < LifeUnits.Length; i++)
+    {
+      if (i >= lifeRemaining)
+      {
+        LifeUnits[i].enabled = false;
+      }
+      else
+      {
+        LifeUnits[i].enabled = true;
+      }
+    }
   }
 
   private void Awake()

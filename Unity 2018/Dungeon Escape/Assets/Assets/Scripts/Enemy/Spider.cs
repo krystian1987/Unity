@@ -25,16 +25,18 @@ public class Spider : EnemyBase, IDamageable
 
   public override void Update()
   {
-    float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
-    if (distance < 10f)
+    if (player != null)
     {
-      Animator.SetBool("InCombat", true);
+      float distance = Vector3.Distance(transform.localPosition, player.transform.localPosition);
+      if (distance < 10f)
+      {
+        Animator.SetBool("InCombat", true);
+      }
+      else
+      {
+        Animator.SetBool("InCombat", false);
+      }
     }
-    else
-    {
-      Animator.SetBool("InCombat", false);
-    }
-
   }
 
   protected override void MoveTowards()
@@ -44,6 +46,5 @@ public class Spider : EnemyBase, IDamageable
   public void Attack()
   {
     Instantiate(AcidEffectPrefab, transform.position, Quaternion.identity);
-
   }
 }
