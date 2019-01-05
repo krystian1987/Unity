@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour, IDamageable
 {
@@ -13,7 +14,6 @@ public class Player : MonoBehaviour, IDamageable
   public int Health { get; set; }
 
   public int diamonds = 0;
-
 
   private Animator _animator;
   private PlayerAnimation _playerAnimation;
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour, IDamageable
 
   private void Attack()
   {
-    if (IsGrounded() && Input.GetKeyDown(KeyCode.LeftShift))
+    if (IsGrounded() && CrossPlatformInputManager.GetButtonDown("B_Button"))
     {
       _playerAnimation.Attack();
     }
@@ -50,13 +50,13 @@ public class Player : MonoBehaviour, IDamageable
 
   private void Movement()
   {
-    var move = Input.GetAxisRaw("Horizontal");
+    var move = CrossPlatformInputManager.GetAxis("Horizontal");
     IsGrounded();
 
     if (move != 0)
       FlipPlayer(move);
 
-    if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+    if (CrossPlatformInputManager.GetButtonDown("A_Button") && IsGrounded())
     {
       _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce);
       _playerAnimation.Jump(true);
